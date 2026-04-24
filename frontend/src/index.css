@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-syne: "Syne", sans-serif;
+  --font-dmsans: "DM Sans", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+  --font-lato: "Lato", sans-serif;
+  --font-bebas: "Bebas Neue", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
+
+  /* Theme 1: Sleek Midnight */
+  --color-midnight-bg: #0d1117;
+  --color-midnight-surface: #161b22;
+  --color-midnight-sidebar: #010409;
+  --color-midnight-border: #30363d;
+  --color-midnight-panel: #1c2128;
+  --color-midnight-primary: #6366f1;
+  --color-midnight-success: #10b981;
+  --color-midnight-danger: #f43f5e;
+  --color-midnight-warning: #f59e0b;
+  --color-midnight-text: #e6edf3;
+  --color-midnight-muted: #7d8590;
+}
+
+@layer base {
+  body {
+    @apply transition-colors duration-300;
+  }
+
+  /* Apply Sleek Midnight as default */
+  :root,
+  .theme-midnight {
+    --bg: var(--color-midnight-bg);
+    --surface: var(--color-midnight-surface);
+    --sidebar-bg: var(--color-midnight-sidebar);
+    --border: var(--color-midnight-border);
+    --panel: var(--color-midnight-panel);
+    --primary: var(--color-midnight-primary);
+    --success: var(--color-midnight-success);
+    --danger: var(--color-midnight-danger);
+    --warning: var(--color-midnight-warning);
+    --text: var(--color-midnight-text);
+    --muted: var(--color-midnight-muted);
+    --font-heading: "Inter", -apple-system, system-ui, sans-serif;
+    --font-body: "Inter", -apple-system, system-ui, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+
+  body {
+    font-family: var(--font-body);
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 10px;
+    border: 2px solid var(--bg);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--muted);
+    opacity: 0.8;
+  }
+}
+
+.bg-app {
+  background-color: var(--bg);
+}
+.bg-surface {
+  background-color: var(--surface);
+}
+.bg-sidebar {
+  background-color: var(--sidebar-bg);
+}
+.bg-panel {
+  background-color: var(--panel);
+}
+.text-app {
+  color: var(--text);
+}
+.text-app-bg {
+  background-color: var(--text);
+}
+.text-muted-app {
+  color: var(--muted);
+}
+.border-app {
+  border-color: var(--border);
+}
+.text-primary-app {
+  color: var(--primary);
+}
+.bg-primary-app {
+  background-color: var(--primary);
+}

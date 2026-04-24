@@ -1,0 +1,38 @@
+[
+  {
+    "id": "gemini-1.5-flash",
+    "model": "gemini-1.5-flash",
+    "integration": "ChatGoogleGenerativeAI",
+    "selected": true
+  },
+  {
+    "id": "gemini-2.0-flash",
+    "model": "gemini-2.0-flash",
+    "integration": "ChatGoogleGenerativeAI",
+    "selected": false
+  },
+  {
+    "id": "gpt-5.4",
+    "model": "gpt-5.4",
+    "integration": "ChatOpenAI",
+    "selected": false
+  },
+  {
+    "id": "gpt-5.4-mini",
+    "model": "gpt-5.4-mini",
+    "integration": "ChatOpenAI",
+    "selected": false
+  },
+  {
+    "id": "claude-opus-4-7",
+    "model": "claude-opus-4-7",
+    "integration": "ChatAnthropic",
+    "selected": false
+  },
+  {
+    "id": "claude-sonnet-4-6",
+    "model": "claude-sonnet-4-6",
+    "integration": "ChatAnthropic",
+    "selected": false
+  }
+]

@@ -1,0 +1,11 @@
+CREATE TABLE budgets (
+  id          SERIAL PRIMARY KEY,
+  user_id     INT REFERENCES users(id) ON DELETE CASCADE,
+  category_id INT REFERENCES categories(id) ON DELETE CASCADE,
+  amount      DECIMAL(10, 2) NOT NULL CHECK (amount > 0),
+  month       INT NOT NULL DEFAULT EXTRACT(MONTH FROM CURRENT_DATE),
+  year        INT NOT NULL DEFAULT EXTRACT(YEAR FROM CURRENT_DATE),
+  created_at  TIMESTAMP DEFAULT NOW()
+);
+
+
